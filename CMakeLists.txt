@@ -15,7 +15,7 @@ set(APIVERSION "6.0")
 set(CMAKE_MACOSX_RPATH 1)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
-"${CMAKE_SOURCE_DIR}/cmake/Modules/")
+"${PROJECT_SOURCE_DIR}/cmake/Modules/")
 
 find_package(CSOUND)
 if(NOT CSOUND_INCLUDE_DIRS)
@@ -30,7 +30,7 @@ include(CheckCXXCompilerFlag)
 ### COMPILER OPTIMIZATION FLAGS
 option(USE_COMPILER_OPTIMIZATIONS "Use the default Csound compiler optimization flags" ON)
 if(USE_COMPILER_OPTIMIZATIONS)
-    include(${CMAKE_SOURCE_DIR}/cmake/CompilerOptimizations.cmake)
+    include(${PROJECT_SOURCE_DIR}/cmake/CompilerOptimizations.cmake)
 endif()
 
 ##/Library/Frameworks/CsoundLib64.framework/Versions/Current/Resources/Opcodes64
